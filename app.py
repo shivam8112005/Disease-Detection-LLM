@@ -82,5 +82,8 @@ if submit_button:
     ]
 
     response = model.generate_content(prompt_parts)
-    print(response.text)
-    st.write(response.text)
+    if response:
+        st.write(response.text)
+        print(response.text)
+    else :
+        st.write("Sorry, I’m having trouble processing your request right now. Please try again in a moment.")
